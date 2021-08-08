@@ -1,0 +1,3 @@
+Это первая работа. Только CSS. Есть три страницы: стартовая (index.html), страница контактов (contacts.html) и страница каталога (catalog1.html). CSS тоже самый простой, не адаптивный, без анимаций, всё держится на margin и padding.
+
+This is my first project. CSS is used only. There are three pages: the initial page (index.html), the contact page (contacts.html), and the catalog page (catalog1.html). CSS is in its simplest form: there is no animation neither adaptive ability, margins and paddings are only used.

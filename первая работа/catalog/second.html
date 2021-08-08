@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>МОЙ САЙТ</title>
+    <link rel="stylesheet" href="../style1.css"> 
+    <script type="text/javascript">
+        function openImageWindow(src) {
+            var image = new Image();
+            image.src = src;
+            /*var width = image.width;
+            var height = image.height;*/
+            window.open(src,"Image");
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <ul class="menu">
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../catalog1.html">Каталог</a></li>
+            <li><a href="../contacts.html">Контакты</a></li>
+        </ul>
+        <div class="logo"><h1>Фотогалерея <i>Obri_la_finestra</i></h1></div>
+	</div>
+    <div class="container_catalog">
+        <img class="img_sale" src="../img/DSC02640.JPG" alt="фотография не отображается" onclick='openImageWindow(this.src);'>
+
+        <h2>Название:</h2> <p class="name">бутон розового пиона (макросъёмка)</p>
+        <h2>Категории:</h2>
+            <ul class="categories_list">
+                <li>растения</li>
+                <li>сад</li>
+            </ul>
+            
+        <input class="buy" type="submit" value="Купить">
+        
+        <h2>Технические характеристики:</h2> <br>
+               <table>
+                   <tr>
+                       <th>Размер файла</th> <th>Размер фотографии</th> <th>ISO</th> <th>Диафрагма</th> <th>Выдержка</th> <th>Фокусное расстояние</th>
+                   </tr>
+                   <tr>
+                       <td>5.2 Мб</td> <td>6000 x 3376</td> <td>500</td><td>f/4.5</td><td>1/2000</td><td>28 мм</td>
+                   </tr>
+               </table>
+            <h2>Фотоаппарат/объеткив:</h2> <p class="text">Фотоаппарат: Canon EOS 350D/ HELIOS-44</p>
+            <h2>Описание:</h2>
+            <p class="text">просто красивая фоточка:)</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+	    Copyright &copy; Alex Parkinson
+	</div>
+
+</body>
+</html>
