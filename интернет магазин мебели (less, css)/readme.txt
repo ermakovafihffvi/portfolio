@@ -1,0 +1,3 @@
+Реализован frontend трёх страниц (стартовая, контакты и каталог) интернет магазина мебели. Использовался препроцессор less. Отсутсвует анимация и способность к адаптации. Дизайн быд предоставлен на курсе по js на факультете веб-разработки на платформе geekbrains. 
+
+There is frontend of three pages of the furniture online store (index, contacts, and products).  Preprocessor less was used. There nor animation neither adaptation ability. The design was provided by an online js-course at the faculty of web development on the geekbrains platform.
