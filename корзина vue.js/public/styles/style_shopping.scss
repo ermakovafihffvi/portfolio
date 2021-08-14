@@ -1,0 +1,267 @@
+﻿@import "style_main.scss";
+
+@mixin InputStyle {
+    width: 355px - 18px*2;
+    height: 45px;
+    background-color: #ffffff;
+    font-size: 13px;
+    line-height: 45px;
+    font-weight: 300;
+    color: #b1b1b1;
+    @include TipicalBorder;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-top: 20px;
+}
+
+@mixin SmallBut {
+    height: 35px;
+    background-color: #ffffff;
+    font-size: 11px;
+    line-height: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    padding-left: 18px;
+    padding-right: 18px;
+    @include TipicalBorder;
+    margin-top: 25px;
+}
+
+.main .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+    .clear {
+        width: 235px;
+        height: 50px;
+        background-color: #ffffff;
+        @include TipicalBorder;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        &:hover{
+            @include boxShadow;
+        }
+        @include ActForBut;
+    }
+    .continue {
+        width: 225px;
+        height: 50px;
+        background-color: #ffffff;
+        @include TipicalBorder;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        &:hover {
+            @include boxShadow;
+        }
+        @include ActForBut;
+    }
+}
+
+.main .cart {
+    margin-top: 70px;
+    .head {
+        display: flex;
+    }
+    .item {
+        height: 168px;
+        @include TipicalBorder;
+        border-left: 0px;
+        border-right: 0px;
+        display: flex;
+        .right {
+            height: inherit;
+            img {
+                width: 100px;
+                height: 115px;
+                object-fit: cover;
+                object-position: center;
+                margin: auto 0;
+            }
+            .details {
+                height: 115px;
+                margin: auto 0px auto 20px;
+                h5 {
+                    margin: 0px;
+                    font-size: 13px;
+                    line-height: 40px;
+                    margin-bottom: 15px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: #222222;
+                }
+                p {
+                    font-size: 13px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    color: #575757;
+                    span {
+                        font-weight: 300;
+                        color: #6f6e6e;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .left {
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #656565;
+            p, i, input {
+                margin: auto 0;
+                text-align: center;
+            }
+            .act {
+                &:hover, &:active {
+                    color: $col;
+                }
+            }
+            input {
+                width: 54px;
+                height: 30px;
+                background-color: #ffffff;
+                border: 1px solid #eaeaea;
+            }
+            .Quan {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .right {
+        width: (470px / 1140px) * 100%;
+        display: flex;
+    }
+    .left {
+        width: (1140px - 470px) / 1140px * 100%;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+    h4 {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.015em;
+        color: #222222;
+    }
+    .unit {
+        width: 80px;
+    }
+    .Quan {
+        width: 68px;
+    }
+    .ship {
+        width: 64px;
+    }
+    .sub {
+        width: 65px;
+    }
+    .act {
+        width: 50px;
+    }
+}
+
+.container .forms {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    height: 272px; /*?*/
+    .Input {
+        @include InputStyle;
+        color: #4e4e4e;
+    }
+    .small_but_form {
+        @include SmallBut;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        &:hover {
+            @include boxShadow;
+        }
+        @include ActForBut;
+    }
+    legend {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+    }
+    .adress {
+        width: 355px;
+        height: inherit;
+        select {
+            width: 355px;
+        }
+    }
+    .discount {
+        width: 355px;
+        height: inherit;
+        p {
+            font-size: 14px;
+            font-weight: 300;
+            color: #000000;
+            line-height: 26px;
+        }
+    }
+    .total {
+        width: 360px - 45px - 45px;
+        height: 214px - 40px - 42px;
+        padding-top: 40px;
+        padding-bottom: 42px;
+        padding-left: 45px;
+        padding-right: 45px;
+        background-color: #f5f3f3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .p1 {
+            font-size: 11px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #4a4a4a;
+            float: right;
+            span {
+                margin-left: 15px;
+            }
+        }
+        .p2 {
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #222222;
+            float: right;
+            span {
+                color: $col;
+                margin-left: 15px;
+            }
+        }
+        .proceed {
+            width: 273px;
+            height: 50px;
+            line-height: 50px;
+            background-color: $col;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+            @include HoverForPink;
+        }
+    }
+}
+

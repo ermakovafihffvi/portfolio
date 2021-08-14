@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "styles/style_singlepage.css",
+    "inputFile": "styles/style_singlepage.scss"
+  },
+  {
+    "outputFile": "styles/style_chekout.css",
+    "inputFile": "styles/style_chekout.scss"
+  },
+  {
+    "outputFile": "styles/style_index.css",
+    "inputFile": "styles/style_index.scss"
+  },
+  {
+    "outputFile": "styles/style_main.css",
+    "inputFile": "styles/style_main.scss"
+  },
+  {
+    "outputFile": "styles/style_product.css",
+    "inputFile": "styles/style_product.scss"
+  },
+  {
+    "outputFile": "styles/style_shopping.css",
+    "inputFile": "styles/style_shopping.scss"
+  }
+]

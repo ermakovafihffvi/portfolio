@@ -1,0 +1,577 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Single Page</title>
+    <link rel="stylesheet" href="styles/style_singlepage.css" />
+    <script src="https://kit.fontawesome.com/ce8d2cb958.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/e8f9002bc4/UntitledProject/style-svg.css">
+    <script defer src="https://i.icomoon.io/public/temp/e8f9002bc4/UntitledProject/svgxuse.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container">
+                <div class="left-header">
+                    <a href="index.html" class="logo"><img src="img/logo.png" alt="не отображается" />Bran<span>D</span></a>
+
+                    <div class="block">
+                        <browse-btn></browse-btn>
+                        <form action="get">
+                            <input class="search_text" type="text" placeholder="Search for Item...">
+                        </form>
+
+                        <!--<a href="#"><i class="far fa-search"></i></a>  почему-то не работает-->
+
+                        <a href="#" class="search">
+                            <svg class="icon icon-search">
+                                <use xlink:href="#icon-search"></use>
+
+                                <defs>
+                                    <symbol id="icon-search" viewBox="0 0 32 32">
+                                        <path d="M19.427 20.427c-1.39 0.99-3.090 1.573-4.927 1.573-4.694 0-8.5-3.806-8.5-8.5s3.806-8.5 8.5-8.5c4.694 0 8.5 3.806 8.5 8.5 0 1.837-0.583 3.537-1.573 4.927l5.585 5.585c0.55 0.55 0.546 1.431-0 1.976l-0.023 0.023c-0.544 0.544-1.431 0.546-1.976 0l-5.585-5.585zM14.5 20c3.59 0 6.5-2.91 6.5-6.5s-2.91-6.5-6.5-6.5c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5v0z"></path>
+                                    </symbol>
+                                </defs>
+
+                            </svg>
+                        </a>
+                        <!--icomoon-->
+                    </div>
+                </div>
+
+                <div class="right-header">
+                    <cart ref="cartRef"></cart>
+                    <button class="MyAccount">My Account <i class="fas fa-caret-down"></i></button>
+                </div>
+            </div>
+        </header>
+
+        <!--<div class="nav">
+        <div class="container">
+            <ul class="menu-header">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">MAN</a></li>
+                <li><a href="#">WOMAN</a></li>
+                <li><a href="#">KIDS</a></li>
+                <li><a href="#">ACCOSERIES</a></li>
+                <li><a href="#">FEATURED</a></li>
+                <li><a href="#">HOT DEALS</a></li>
+            </ul>
+        </div>
+    </div>-->
+        <nav class="nav">
+            <div class="container">
+                <ul class="menu-header">
+                    <li>
+                        <a href="index.html">HOME</a>
+                        <div class="hidden_menu">
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                    <li><a href="#">Blazers</a></li>
+                                    <li><a href="#">Denim</a></li>
+                                    <li><a href="#">Leggins/Pants</a></li>
+                                    <li><a href="#">Skirts/Shorts</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <div class="super_sale">
+                                    <p>SUPER SALE!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="man">
+                        <a href="#">MAN</a>
+                        <div class="hidden_menu">
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                    <li><a href="#">Blazers</a></li>
+                                    <li><a href="#">Denim</a></li>
+                                    <li><a href="#">Leggins/Pants</a></li>
+                                    <li><a href="#">Skirts/Shorts</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <div class="super_sale">
+                                    <p>SUPER SALE!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="woman">
+                        <a href="#">WOMAN</a>
+                        <div class="hidden_menu">
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                    <li><a href="#">Blazers</a></li>
+                                    <li><a href="#">Denim</a></li>
+                                    <li><a href="#">Leggins/Pants</a></li>
+                                    <li><a href="#">Skirts/Shorts</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <div class="super_sale">
+                                    <p>SUPER SALE!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="kids">
+                        <a href="#">KIDS</a>
+                        <div class="hidden_menu">
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                    <li><a href="#">Blazers</a></li>
+                                    <li><a href="#">Denim</a></li>
+                                    <li><a href="#">Leggins/Pants</a></li>
+                                    <li><a href="#">Skirts/Shorts</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <div class="super_sale">
+                                    <p>SUPER SALE!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">ACCOSERIES</a>
+                        <div class="hidden_menu">
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                    <li><a href="#">Blazers</a></li>
+                                    <li><a href="#">Denim</a></li>
+                                    <li><a href="#">Leggins/Pants</a></li>
+                                    <li><a href="#">Skirts/Shorts</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <div class="super_sale">
+                                    <p>SUPER SALE!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">FEATURED</a>
+                        <div class="hidden_menu">
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                    <li><a href="#">Blazers</a></li>
+                                    <li><a href="#">Denim</a></li>
+                                    <li><a href="#">Leggins/Pants</a></li>
+                                    <li><a href="#">Skirts/Shorts</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <div class="super_sale">
+                                    <p>SUPER SALE!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">HOT DEALS</a>
+                        <div class="hidden_menu">
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                    <li><a href="#">Blazers</a></li>
+                                    <li><a href="#">Denim</a></li>
+                                    <li><a href="#">Leggins/Pants</a></li>
+                                    <li><a href="#">Skirts/Shorts</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="block">
+                                <ul class="sub_menu">
+                                    <li><a href="#">WOMEN</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Sweaters/Knits</a></li>
+                                    <li><a href="#">Jackets/Coats</a></li>
+                                </ul>
+                                <div class="super_sale">
+                                    <p>SUPER SALE!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div class="new_arrivals">
+            <div class="container">
+                <h2 class="title">NEW ARRIVALS</h2>
+                <nav class="menu_slider1">
+                    <p><a href="#">HOME</a> / <a href="#">MEN</a> / <a href="#">NEW ARRIVALS</a></p>
+                </nav>
+            </div>
+        </div>
+
+        <div class="slider2">
+            <div class="container">
+                <img src="img/single_page1.jpg" alt="не отображается" />
+            </div>
+            <!--<button class="but_left"><i class="fas fa-angle-left"></i></button>
+        <button class="but_right"><i class="fas fa-angle-right"></i></button>-->
+            <button class="but_left">
+                <svg class="icon icon-angle-left">
+                    <use xlink:href="#icon-angle-left"></use>
+                    <defs>
+                        <symbol id="icon-angle-left" viewBox="0 0 11 28">
+                            <path d="M9.797 8.5c0 0.125-0.063 0.266-0.156 0.359l-6.141 6.141 6.141 6.141c0.094 0.094 0.156 0.234 0.156 0.359s-0.063 0.266-0.156 0.359l-0.781 0.781c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l7.281-7.281c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.219 0.156 0.359z"></path>
+                        </symbol>
+                    </defs>
+                </svg>
+            </button>
+            <button class="but_right">
+                <svg class="icon icon-angle-right">
+                    <use xlink:href="#icon-angle-right"></use>
+                    <defs>
+                        <symbol id="icon-angle-right" viewBox="0 0 9 28">
+                            <path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.219-0.156-0.359 0-0.125 0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
+                        </symbol>
+                    </defs>
+                </svg>
+            </button>
+        </div>
+
+        <div class="collection container">
+            <h4>WOMEN COLLECTION</h4>
+            <div class="paggination">
+                <a href="#"></a>
+                <a class="marked" href="#"></a>
+                <a href="#"></a>
+            </div>
+            <h2>Moschino Cheap And Chic</h2>
+            <p>Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.</p>
+            <div class="properties">
+                <h6 class="material">MATERIAL: <span>COTTON</span></h6>
+                <h6>DESIGNER: <span>BINBURHAN</span></h6>
+            </div>
+
+            <p class="prise">$561</p>
+            <hr class="line" />
+            <form>
+                <fieldset class="form_item">
+                    <label>CHOOSE COLOR</label>
+                    <input />
+                </fieldset>
+                <fieldset class="form_item">
+                    <label>CHOOSE SIZE</label>
+                    <input />
+                </fieldset>
+                <fieldset class="form_item">
+                    <label>QUANTITY</label>
+                    <input type="number" />
+                </fieldset>
+                <button class="AddToCart">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="30px" height="27px">
+                        <path fill-rule="evenodd"
+                              d="M2.9614258,3.9559326 C2.9614258,3.9559326 5.7183228,3.9559326 5.7183228,3.9559326 C5.7183228,3.9559326 9.645264,18.401611 9.645264,18.401611 C9.757385,18.82544 10.142029,19.118896 10.57489,19.118896 C10.57489,19.118896 22.644226,19.118896 22.644226,19.118896 C23.02893,19.118896 23.365479,18.890747 23.525696,18.531738 C23.525696,18.531738 27.917542,8.260498 27.917542,8.260498 C28.045715,7.9505615 28.013672,7.6081543 27.837341,7.3309326 C27.661133,7.053833 27.356506,6.890869 27.035889,6.890869 C27.035889,6.890869 13.7005005,6.890869 13.7005005,6.890869 C13.171448,6.890869 12.7387085,7.3309326 12.7387085,7.8688965 C12.7387085,8.406982 13.171448,8.847168 13.7005005,8.847168 C13.7005005,8.847168 25.561401,8.847168 25.561401,8.847168 C25.561401,8.847168 22.003174,17.16211 22.003174,17.16211 C22.003174,17.16211 11.296143,17.16211 11.296143,17.16211 C11.296143,17.16211 7.3693237,2.717163 7.3693237,2.717163 C7.25708,2.2928467 6.8724365,1.9993896 6.4396973,1.9993896 C6.4396973,1.9993896 2.9614258,1.9993896 2.9614258,1.9993896 C2.432495,1.9993896 1.9997559,2.4395752 1.9997559,2.977539 C1.9997559,3.5159912 2.432495,3.9559326 2.9614258,3.9559326 ZM9.661255,25.999512 C10.863403,25.999512 11.841064,25.004639 11.841064,23.78186 C11.841064,22.55957 10.863403,21.564575 9.661255,21.564575 C8.459106,21.564575 7.4813843,22.559326 7.4813843,23.78186 C7.4813843,25.004639 8.459106,25.999512 9.661255,25.999512 ZM23.285461,25.999512 C23.333557,25.999512 23.397522,25.999512 23.445618,25.999512 C24.022766,25.950684 24.551636,25.689697 24.93628,25.233154 C25.320984,24.793213 25.497314,24.222046 25.465271,23.619019 C25.38507,22.412476 24.343384,21.48291 23.141174,21.564575 C21.939087,21.64624 21.041504,22.722168 21.12146,23.928833 C21.201782,25.086304 22.14746,25.999512 23.285461,25.999512 Z" />
+                    </svg>
+                    Add to Card
+                </button>
+            </form>
+        </div>
+
+        <div class="alsoLike">
+            <div class="container">
+                <h3>YOU MAY AlSO LIKE</h3>
+                <div class="list-of-items">
+                    <also_like></also_like>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider5">
+            <div class="slider5_mask">
+                <div class="container">
+                    <div class="left-block">
+                        <img src="img/photo.png" alt="не отображается" />
+                        <div class="comment">
+                            <p class="p1">
+                                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                                a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                            </p><br />
+                            <p class="p2"><span>Bin Burhan</span><br />Dhaka, Bd</p>
+                            <div class="paggination">
+                                <a href="#"></a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-block">
+                        <p class="title">
+                            Subscribe <br />
+                            <span>FOR OUR NEWLETTER AND PROMOTION</span>
+                        </p>
+                        <div class="supscribe">
+                            <form action="#">
+                                <input type="text" placeholder="Enter Your Email" />
+                            </form>
+                            <button>Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="main-block">
+                    <div class="block_1">
+                        <a href="index.html" class="logo"><img src="img/logo.png" alt="не отображается" />Bran<span>D</span></a> <br />
+                        <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p> <br />
+                        <p>
+                            Efficiently plagiarize 24/365 action items and focused infomediaries.
+                            Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+                        </p>
+                    </div>
+                    <div class="blockx3">
+                        <div class="block-item">
+                            <a class="title" href="#">COMPANY</a>
+                            <ul class="footer-list">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">How It Works</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="block-item">
+                            <a href="#" class="title">INFORMATION</a>
+                            <ul class="footer-list">
+                                <li><a href="#">Tearms &amp; Condition</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">How to Buy</a></li>
+                                <li><a href="#">How to Sell</a></li>
+                                <li><a href="#">Promotion</a></li>
+                            </ul>
+                        </div>
+                        <div class="block-item">
+                            <a href="#" class="title">SHOP CATEGORY</a>
+                            <ul class="footer-list">
+                                <li><a href="#">Men</a></li>
+                                <li><a href="#">Women</a></li>
+                                <li><a href="#">Child</a></li>
+                                <li><a href="#">Apparel</a></li>
+                                <li><a href="#">Brows All</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="container">
+                    <p class="p1">&copy; 2017  Brand  All Rights Reserved.</p>
+                    <div class="icons">
+                        <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

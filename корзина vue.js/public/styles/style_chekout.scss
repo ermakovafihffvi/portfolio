@@ -1,0 +1,210 @@
+﻿@import "style_main.scss";
+
+.anketa {
+    margin-top: 60px;
+    .none {
+        display: none;
+    }
+    .form1, .form2, .form3, .form4, .form5, .form6 {
+        display: none;
+        transition-duration: 0.5s;
+    }
+    .quest1 input:checked ~ .form1 {
+        display: flex;
+    }
+    .quest2 input:checked ~ .form2 {
+        display: block;
+    }
+    .quest3 input:checked ~ .form3 {
+        display: block;
+    }
+    .quest4 input:checked ~ .form4 {
+        display: flex;
+    }
+    .quest5 input:checked ~ .form5 {
+        display: block;
+    }
+    .quest6 input:checked ~ .form6 {
+        display: block;
+    }
+
+    .line {
+        height: 0px;
+        @include TipicalBorder;
+    }
+
+    label {
+        font-size: 17px;
+        line-height: 74px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+    }
+
+    .form1 {
+        height: 438px;
+        padding-left: 35px;
+        padding-bottom: 80px;
+        .left_form1 {
+            width: 50%;
+            .continue {
+                margin-top: 52px;
+            }
+            .space {
+                height: 15px;
+            }
+        }
+        .right_form1 {
+            width: 50%;
+            input {
+                @include TipicalBorder;
+                width: 390px;
+                height: 45px;
+                margin-bottom: 15px;
+                padding-left: 15px;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+                color: #242424;
+
+            }
+            .chekbox span{
+                font-size: 17px;
+                line-height: 20px;
+                font-weight: 400;
+                color: #ff0d0d;
+                margin-left: 2px;
+            }
+            .required {
+                font-size: 13px;
+                line-height: 32px;
+                font-weight: 400;
+                color: #ff0d0d;
+            }
+            .login_forget {
+                display: flex;
+                margin-top: 20px;
+                a {
+                    margin-left: 40px;
+                    margin-top: 50px - 40px;                    
+                    font-size: 14px;
+                    line-height: 40px;
+                    font-weight: 700;
+                    color: #222222;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    $k: 2;
+
+    .form4 {
+        height: 438px;
+        padding-left: 35px;
+        padding-bottom: 80px;
+       
+        justify-content: center;
+        align-items: center;
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            @include boxShadow;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: anim 10s;
+            -webkit-animation: anim 10s;
+            -webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite; 
+            animation-timing-function: linear;
+        }
+        .internal_circle {
+            /*position: absolute;
+            top: 50%;
+            left: 50%;*/
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 30px 20px rgba(255, 1, 1, 0.47);
+            background-color: $colRed;
+        }
+        .airplane{
+            position: absolute;
+            top: 3%;
+            left: 50%;
+            fill: $col;
+            stroke: $col;
+            width: 30px;
+            height: 30px;
+            transform: rotate(135deg);
+        }
+        @keyframes anim {
+            to{
+                transform: rotate(1turn);
+            }
+        }
+    }
+    h6 {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+    }
+    .grey_text {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #b3b2b2;
+    }
+
+    p.chekbox {
+        display: flex;
+        align-items: center;
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+        input {
+            margin-right: 15px;
+            background-color: #000000;
+            border: #000000;
+        }
+    }
+    button {
+        @include TipicalBorder;
+        height: 50px;
+        width: 180px;
+        background-color: #ffffff;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        &:hover {
+            @include boxShadow;
+        }
+        @include ActForBut;
+    }
+    a{
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+    }
+    a:hover {
+        color: #222222;
+    }
+}
