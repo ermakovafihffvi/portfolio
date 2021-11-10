@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,500;0,700;1,100&display=swap');
+@import "reset.scss";
+
+@mixin hover_a{
+    &:hover{
+        color: aliceblue;
+    }
+}
+
+.main_a{
+    @include hover_a;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.prod_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .buy_block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 300px;
+        margin-bottom: 50px;
+        button {
+            height: 45px;
+            width: 70px;
+        }
+    }
+    .img_block{
+        height: 550px;
+        img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.menu_item{
+    line-height: 50px;
+    height: 50px;
+    width: 400px;
+    padding-left: 20px;
+    &:hover{
+        background-color: rgb(143, 72, 48);
+    }
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer {
+    flex-shrink: 0;
+}
+
+#content_max {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Glory';
+    font-size: 4em;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Glory';
+    font-size: 1.5em;
+    font-weight: 500;
+    
+    text-align: center;
+}
+
+.pop{
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+a {
+    font-family: 'Glory';
+    transition-duration: 0.5s;
+}
+
+p {
+    font-family: 'Glory';
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+.cart_i {
+    display: inline-block;
+    width: 3em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    &:hover{
+        color: aliceblue;
+    }
+}
+
+.cart_numb {
+    width: auto;
+    height: 2em;
+
+}
+
+.isnumb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    border-radius: 45px;
+}
+
+.container{
+    width: 1400px;
+    margin: 0 auto;
+    background-color: bisque;
+}
+
+#header {
+    //background-color:greenyellow;
+    background-color: rgb(109, 151, 121);
+    padding: 50px;
+    padding-bottom: 70px;
+    //display: flex;
+    //justify-content: space-between;
+    display: grid;
+    grid-template-columns: 15fr 3fr 1fr 1fr;
+    align-items: center;
+}
+
+.menu {
+    margin: -70px auto 0 auto;
+    background-color: darksalmon;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 5fr 5fr 1fr 1fr;
+    align-items: center;
+    a {
+        margin-left: 20px;
+    }
+}
+
+.search_field {
+    height: 1.5em;
+}
+
+.search_btn {
+    background-color: white;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid;
+}
+
+.search_i {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    &:hover{
+        color: aliceblue;
+    }
+}
+
+.banner {
+    margin-top: 20px;
+    width: inherit;
+    display: inline-flex;
+    img {
+        object-fit: cover;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+.popular {
+    padding: 20px 60px 20px 60px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+$width_item: 230px;
+$padding_item: 20px;
+$catalog_grid: $width_item + 2 * $padding_item;
+
+.catalog {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $catalog_grid);
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    justify-content: center;
+}
+
+.item {
+    width: $width_item;
+    height: 330px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: $padding_item;
+    align-items: self-start;
+    justify-content: center;
+    transition-duration: 0.5s;
+    background-color: aliceblue;
+    img {
+        max-height: 200px;
+    }
+    p {
+        width: 100%;
+    }
+    &:hover{
+        box-shadow: 0 0 10px rgba(143, 227, 165, 1);
+    }
+}
+
+.popular_item {
+    @extend .item;
+}
+
+.catalog_item {
+    @extend .item;
+}
+
+.buy_btn_block{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    .buy_btn{
+        height: 1.5em;
+        font-family: 'Glory';
+        font-size: 1.2em;
+        font-weight: 100;
+    }
+}
+
+.upload{
+    width: max-content;
+    margin-left: 60%;
+    margin-top: 50px;
+}
+
+.cart_list {
+    display: grid;
+    grid-template-columns: 6fr 6fr 1fr 2fr 1fr 6fr;
+    justify-items: center;
+    row-gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    .line {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        height: 1px;
+        width: 100%;
+        border-top: groove;
+    }
+    .cart_item {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        width: 100%;
+        display: grid;
+        grid-template-columns: inherit;
+        justify-items: inherit;
+        align-items: inherit;
+        img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+        p, button {
+            height: max-content;
+        }
+    }
+}
+
+$btn_width: 300px;
+.clear_checkout_block{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    border-top: groove;
+    .p_sum{
+        justify-self: end;
+    }
+    .sum_cost {
+        justify-self: start;
+    }
+    .clear_checkout_buttons{
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        .btn {
+            margin-top: 10px;
+            width: $btn_width;
+            height: 60px;
+        }
+    }
+}
+
+.enter_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form {
+        display: contents;
+        input {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        .submit {
+            width: 100px;
+            height: 40px;
+        }
+    }
+}
+
+.sign_up_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.form_sign_up{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    width: max-content;
+    margin-bottom: 40px;
+    .submit{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        height: 45px;
+        width: 80%;
+        justify-self: center;
+    }
+}
+
+.personal_account{
+    padding-right: 150px;
+    padding-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.personal_account_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 8px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    .adress{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+    }
+}
+
+.confirm_data{
+    padding-right: 150px;
+    padding-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .confirm_btn{
+        height: 45px;
+        width: max-content;
+    }
+}
+
+.order_item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+    align-items: center;
+    border-radius: 16px;
+    border: 2px solid rgb(109, 151, 121);
+    transition-duration: 2s;
+    &:hover{
+        background-color: darksalmon;
+    } 
+    p {
+        font-family: 'Glory';
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+}
+
+.order_item_info{
+    border: 2px solid rgb(109, 151, 121);
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    width: 60%;
+}
+
+.marked{
+    background-color: darksalmon;
+    color: aliceblue;
+}
+
+.hide{
+    border: 0px;
+    opacity: 0;
+    height: 0px;
+}
+
+.usual_box{
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+#content {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: inherit;
+}
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 150px;
+    background-color: rgb(109, 151, 121);
+}
